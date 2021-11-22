@@ -1,0 +1,20 @@
+type Aluno {
+    id: ID!
+    nome: String!
+    curso: String!
+    semestre: Int!
+    ra: Int!
+    cpf: Float!
+    cidade: String!
+}
+
+type Query {
+    alunos: [Aluno!]!
+    aluno(id: ID!): Aluno
+}
+
+type Mutation {
+    criarAluno(nome: String!, curso: String!, semestre: Int!, ra: Int!, cpf: Float!, cidade: String!): Aluno
+    removerAlunoById(id: ID!): Aluno
+    editarAlunoById(id: ID!, nome: String, curso: String, semestre: Int, ra: Int, cpf: Float, cidade: String): Aluno
+}
