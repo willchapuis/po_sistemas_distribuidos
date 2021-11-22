@@ -53,4 +53,6 @@ Postman Collection (Rotas) em ./Postman Collections/Trabalho SD - GRAPHQL.postma
 
 ## Desenvolvido por
 
-William Chapuis Marciano
+William Chapuis Marciano - RA 576591
+
+Leonardo Benini Cruz - RA 581364
