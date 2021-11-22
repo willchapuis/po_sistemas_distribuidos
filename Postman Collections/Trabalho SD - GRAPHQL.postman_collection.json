@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "487923cb-0b24-46d4-98cf-3ad55969767d",
+		"name": "Trabalho SD - GRAPHQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  aluno1: criarAluno(nome: \"Pedro\", curso: \"BCC\", semestre: 8, ra: 5, cpf: 153783425, cidade: \"Garça\") {\r\n    id\r\n    nome\r\n  }\r\n  \r\n  aluno2: criarAluno(nome: \"Leonardo\", curso: \"BCC\", semestre: 1, ra: 2, cpf: 234581034, cidade: \"Pompeia\") {\r\n    id\r\n    nome\r\n  }\r\n  \r\n  aluno3: criarAluno(nome: \"Heloise\", curso: \"BSI\", semestre: 5, ra: 1, cpf: 182934412, cidade: \"Oriente\") {\r\n    id\r\n    nome\r\n  }\r\n  \r\n  aluno4: criarAluno(nome: \"Ingrid\", curso: \"BAP\", semestre: 6, ra: 4, cpf: 892319355, cidade: \"Bombinhas\") {\r\n    id\r\n    nome\r\n  }\r\n  \r\n  aluno5: criarAluno(nome: \"Marcos\", curso: \"BDG\", semestre: 3, ra: 3, cpf: 238412348, cidade: \"Marilia\") {\r\n    id\r\n    nome\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000"
+				},
+				"description": "Mutation Cadastrar aluno"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Alunos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\r\n  alunos{\r\n    id\r\n    nome\r\n    curso\r\n    semestre\r\n    ra\r\n    cpf\r\n    cidade\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000"
+				},
+				"description": "Query Listando alunos"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\r\n  aluno(id: \"\") {\r\n    id\r\n    nome\r\n    curso\r\n    semestre\r\n    ra\r\n    cpf\r\n    cidade\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000"
+				},
+				"description": "Query Buscando aluno pelo id"
+			},
+			"response": []
+		},
+		{
+			"name": "Remover Aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  removerAlunoById(id: \"\") {\r\n    id\r\n    nome\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000"
+				},
+				"description": "Mutation removendo aluno pelo id"
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  editarAlunoById(id: \"\", nome: \"novo nome\", curso: \"BCC\" ) {\r\n    id\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000"
+				},
+				"description": "Mutation editando aluno buscado pelo id"
+			},
+			"response": []
+		}
+	]
+}

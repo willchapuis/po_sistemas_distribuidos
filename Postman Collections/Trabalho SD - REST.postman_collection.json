@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "70662bcc-feda-45f5-9b05-67a85100f354",
+		"name": "Trabalho SD - REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ra\": 5,\r\n    \"cidade\": \"Garça\",\r\n    \"cpf\": 153783425,\r\n    \"curso\": \"BCC\",\r\n    \"nome\": \"Pedro\",\r\n    \"semestre\": 8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aluno",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aluno"
+					]
+				},
+				"description": "HTTP Post para cadastrar aluno"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Alunos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/aluno",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aluno"
+					]
+				},
+				"description": "HTTP Get listando alunos"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Aluno",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/aluno/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aluno",
+						"2"
+					]
+				},
+				"description": "HTTP Get Buscando aluno pelo ra"
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Aluno",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ra\": 2,\r\n    \"nome\": \"Leonardo\",\r\n    \"curso\": \"BCC\",\r\n    \"cidade\": \"Pompeia\",\r\n    \"semestre\": 1,\r\n    \"cpf\": 234581034\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aluno/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aluno",
+						"2"
+					]
+				},
+				"description": "HTTP PUT editando aluno buscado pelo ra"
+			},
+			"response": []
+		},
+		{
+			"name": "Remover Aluno",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/aluno/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aluno",
+						"3"
+					]
+				},
+				"description": "HTTP DELETE removendo aluno pelo ra"
+			},
+			"response": []
+		}
+	]
+}
