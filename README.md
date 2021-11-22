@@ -49,7 +49,7 @@ Postman Collection (Rotas) em `./Postman Collections/Trabalho SD - REST.postman_
 - graphql-yoga 1.18.3
 - mongoose 6.0.13
 
-Postman Collection (Rotas) em ./Postman Collections/Trabalho SD - GRAPHQL.postman_collection.json
+Postman Collection (Rotas) em `./Postman Collections/Trabalho SD - GRAPHQL.postman_collection.json`
 
 ## Desenvolvido por
 
